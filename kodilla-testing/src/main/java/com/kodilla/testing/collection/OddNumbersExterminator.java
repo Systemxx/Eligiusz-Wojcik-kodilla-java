@@ -8,14 +8,14 @@ public class OddNumbersExterminator {
 
         public List<Integer> exterminate(List<Integer> numbers) {
 
-            List<Integer> aList = new LinkedList<>();
+            List<Integer> resultList = new LinkedList<>();
 
               for (int number : numbers) {
                 if (number % 2 == 0) {
-                    aList.add(number);
+                    resultList.add(number);
                 }
             }
 
-            return aList;
+            return resultList;
         }
     }

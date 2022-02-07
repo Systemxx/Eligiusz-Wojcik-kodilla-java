@@ -39,15 +39,19 @@ public class CollectionTestSuite {
         //Given
 
         List<Integer> emptyList = new LinkedList<>();
+        List<Integer> normalList = new LinkedList<>();
 
         //When
 
-        List<Integer> resultList = oddNumbersExterminator.exterminate(emptyList);
+        List<Integer> resultList = oddNumbersExterminator.exterminate(normalList);
         System.out.println("Testing empty list");
 
         //Then
         Assertions.assertEquals(emptyList, resultList);
     }
+
+    @DisplayName("when removing odd entries from List. " +
+            "the List should present even numbers only")
 
     @Test
     void testOddNumbersExterminateNormalList() {
@@ -73,7 +77,7 @@ public class CollectionTestSuite {
 
         //Then
 
-        Assertions.assertEquals(resultList, expectedList);
+        Assertions.assertEquals(expectedList, resultList);
     }
 }
 
